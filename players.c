@@ -45,7 +45,6 @@ else {
 //when condition is correct the program asks user to input the player types
 printf("enter player types\n");
 for(i =0; i<=number_players; i++){
-	printf("enter player types\n");
 	players[i];
 	fgets(type, 20,stdin); //scans in the users input 
 
