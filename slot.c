@@ -44,11 +44,6 @@ int main(void)
 		}
 		for(int i = 0; i < numSlots; i++)  {
 			printf("type%d player%d\n", arrSlots[i].type, arrSlots[i].player);
-
-		/*if(arrSlots[i].type ==0)
-			printf("Level Ground\n");
-			arrSlots[i].type = "Level Ground";
-			printf("%d", arrSlots[i].type);*/
 		}
 	}
 	return 0;
