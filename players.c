@@ -43,7 +43,7 @@ if(number_players > 6){
 }
 else { 
 //when condition is correct the program asks user to input the player types
-printf("enter player types\n");
+printf("enter player type\n");
 for(i =0; i<=number_players; i++){
 	players[i];
 	fgets(type, 20,stdin); //scans in the users input 
