@@ -193,14 +193,60 @@ else if(players[i].type_player[i]== type_wizard[i]){
 			//printf("type%d player%d\n", arrSlots[i].type1, arrSlots[i].player);
 		}
 	}
+}
+ int click, click2;
+for(i =1; i<=number_players; i++){
+//getting user to pick movement or attack 
+printf("Click 1 if you want to move %s\nClick 2 if you want to attack another player\n", players[i].name_player);
+scanf("%d", &click);
+
+if(click == 1){
+	//giving user the option to move forward or backwards
+	printf("Click 1 if you want to move foward\nClick 2 if you want to move back\n");
+	scanf("%d", &click2);
+	if(click2 == 1){
+		players[i].slot_location += 2; //adding 1 to the location didn't change the value 
 	}
+	if(click2 = 2){
+		players[i].slot_location -=  1;
+	}
+	//1 = hill
+	if(arrSlots[i].type1 == 1){
+		//change of capabilities 
+		if(players[i].dexterity < 50){
+			players[i].strength = players[i].strength - 10;
+		}
+		if(players[i].dexterity >= 60){
+			players[i].strength = players[i].strength + 10;
+		}
+	}	
+	// 2 = city
+	if(arrSlots[i].type1 == 2){
+		//change of capabilities
+		if(players[i].smartness > 60){
+			players[i].magic_skills = players[i].magic_skills +10;
+		}
+		if(players[i].smartness <= 50){
+			players[i].dexterity = players[i].dexterity - 10;
+		}
+	}
+	printf("new location of %s %d\n",players[i].name_player, players[i].slot_location);
+}
+}
+
+
+if(click == 2){
+	
+	//attack
+}
+
 	
 	
 	
-	/*
+	
 	// at the end 
 	for(i =1; i<=number_players; i++){
 		printf("%s(%s  %d)\n", players[i].name_player, players[i].type_player, players[i].life_points);
-	}*/
+	}
 	return 0;
 }
