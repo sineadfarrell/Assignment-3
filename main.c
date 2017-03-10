@@ -269,7 +269,7 @@ if(click == 2){
 	
 	// at the end 
 	for(i =1; i<=number_players; i++){
-		printf("%s(%s  %d)\n", players[i].name_player, players[i].type_player, players[i].life_points);
+		printf("%s(%s,  %d)\n", players[i].name_player, players[i].type_player, players[i].life_points);
 	}
 	return 0;
 }
