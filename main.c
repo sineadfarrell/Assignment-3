@@ -238,6 +238,16 @@ if(click == 1){
 if(click == 2){
 	
 	//attack
+	if(players[attacked].strength<=70)	{
+		new = players[attacked].life_points - 0.5*players[attacked].strength;
+		players[attacked].life_points = new;
+		printf("Your life points are now %d\n", players[attacked].life_points);
+	}
+	if(players[attacked].strength>70)	{
+		new = players[attacker].life_points - 0.3*players[attacked].strength;
+		players[attacker].life_points = new;
+		printf("Your life points are now %d\n", players[attacker].life_points);
+	}
 }
 
 	
