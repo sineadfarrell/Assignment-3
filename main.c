@@ -215,9 +215,16 @@ if(click == 1){
 		//change of capabilities 
 		if(players[i].dexterity < 50){
 			players[i].strength = players[i].strength - 10;
+			if(players[i].strength<0)	{
+				players[i].strength = 0;
+			}
 		}
 		if(players[i].dexterity >= 60){
 			players[i].strength = players[i].strength + 10;
+			if(players[i].strength>100)	{
+				players[i].strength = 100;
+			}
+			
 		}
 	}	
 	// 2 = city
@@ -225,9 +232,15 @@ if(click == 1){
 		//change of capabilities
 		if(players[i].smartness > 60){
 			players[i].magic_skills = players[i].magic_skills +10;
+			if(players[i].magic_skills>100)	{
+				players[i].magic_skills = 100;
+			}
 		}
 		if(players[i].smartness <= 50){
 			players[i].dexterity = players[i].dexterity - 10;
+			if(players[i].dexterity<0)	{
+				players[i].dexterity = 0;
+			}
 		}
 	}
 	printf("new location of %s %d\n",players[i].name_player, players[i].slot_location);
