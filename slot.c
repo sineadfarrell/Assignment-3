@@ -4,7 +4,7 @@
 #define NO_PLAYER -1
 
 struct slots {
-	int type;
+	int type1;
 	int player;
 };
 
@@ -48,7 +48,6 @@ else {
 //when condition is correct the program asks user to input the player types
 printf("enter player types\n");
 for(i =0; i<=number_players; i++){
-	printf("enter player types\n");
 	players[i];
 	fgets(type, 20,stdin); //scans in the users input 
 
@@ -151,8 +150,8 @@ else if(type[i]== type_wizard[i]){
 }
 	srand(time(NULL));
 	//Declaring variables
-	int numSlots =0, count =0, type =0, slot =0;
-	int number_players =6, player =0;
+	int numSlots =0, count =0, type1 =0, slot =0;
+	int number_players1 =6, player =0;
 	
 	printf("Select a number of slots: ");
 	scanf("%d", &numSlots);
@@ -163,16 +162,16 @@ else if(type[i]== type_wizard[i]){
 	else {
 		//Assigning random integers for each type of Slot
 		for(count=0;count<numSlots;count++) {
-			type = rand()%3;
-			arrSlots[count].type = type;
+			type1 = rand()%3;
+			arrSlots[count].type1 = type1;
 			arrSlots[count].player = NO_PLAYER;
 		}
 		
 		for(int i = 0; i < numSlots; i++)  {
-			printf("%d \n", arrSlots[i].type);
+			printf("%d \n", arrSlots[i].type1);
 		}
 		//Assigning each player to a Slot randomly
-		for(count=0;count<number_players;count++) {
+		for(count=0;count<number_players1;count++) {
 			slot = rand()% numSlots;
 			printf("slot %d player %d\n", slot, count);
 			
@@ -182,7 +181,7 @@ else if(type[i]== type_wizard[i]){
 			arrSlots[slot].player = count;
 		}
 		for(int i = 0; i < numSlots; i++)  {
-			printf("type%d player%d\n", arrSlots[i].type, arrSlots[i].player);
+			printf("type%d player%d\n", arrSlots[i].type1, arrSlots[i].player);
 		}
 	}
 	return 0;
