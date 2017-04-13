@@ -182,6 +182,15 @@ createBoard(boardSize, &upLeft, &upRight, &downLeft, &downRight);
 for(i =0; i<=number_players; i++){
 	if(players[i].life_points <= 0){
 		//remove player from the game
+		players[i].name_player[10]=='\0';
+		players[i].type_player[10]=='\0';
+		players[i].smartness==0;
+		players[i].strength==0;
+		players[i].magic_skills==0;
+		players[i].luck==0;
+		players[i].dexterity==0; 
+		//players[i].life_points==NULL;
+		players[i].board[-1][-1];
 	}
 }
 int r,c, slot_type;
