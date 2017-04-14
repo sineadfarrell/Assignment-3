@@ -219,6 +219,61 @@ int r,c, slot_type;
 		players[i].board[r][c];
 		printf("Player %s in location(%d,%d) of type %d\n", players[i+1].name_player, r, c, location[r][c].type );
 	}	
+ int round;
+ 	//while the game continues rounds are played
+	while(number_players >= 2){ 
+	for(i=0; i < number_players; i++){
+		printf("Do you want to move to ajacant slot(1), attack(2) or quit game(3)\n");
+		scanf("%d", &round);
+	
+	if(round==1){
+		//move ajacant slot
+	}
+		
+		//capabilty change if moved to hill
+		/*
+	if( new location ==1){
+			
+		if(players[i].dexterity < 50)
+			players[i].strength = players[i].strength -10;
+		if(players[i].dexterity >= 60)
+			players[i].strenght = players[i].strenght + 10;
+		}
+		*/
+		/*
+		if( new location  ==2){
+		//capabilty change if moved to City
+		if(players[i].smartness > 60)
+			players[i].magic_skills = players[i].magic_skills +10;
+		if(players[i].smartness <= 50)
+			players[i].dexterity = players[i].dexterity - 10;
+		}
+	
+	*/
+	
+	if(round == 2){
+		//attack
+		
+	}
+	if(round == 3){
+		players[i].name_player[10]=='\0';
+		players[i].type_player[10]=='\0';
+		players[i].smartness==0;
+		players[i].strength==0;
+		players[i].magic_skills==0;
+		players[i].luck==0;
+		players[i].dexterity==0; 
+		//players[i].life_points==NULL;
+		players[i].board[-1][-1];
+		number_players--; //decrementing number of players 
+		}
+	}
+}
+	if(number_players < 2){
+		printf("GAME OVER");
+		exit(0);
+	}
+
 
  
 return 0;
