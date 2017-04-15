@@ -158,14 +158,7 @@ else if(players[i].type_player[i]== type_wizard[i]){
 }
 }
 /*
- 
- 
- 
 		*********  Creating 7 x 7 board of slots  **************
-
-
-
-
 */
 
 int boardSize =7;
@@ -223,25 +216,48 @@ int r,c, slot_type;
  	//while the game continues rounds are played
 	while(number_players >= 2){ 
 	for(i=0; i < number_players; i++){
-		printf("Do you want to move to ajacant slot(1), attack(2) or quit game(3)\n");
+		printf("Do you(%s) want to move to ajacant slot(1), attack(2) or quit game(3)\n", players[i+1].name_player);
 		scanf("%d", &round);
 	
 	if(round==1){
-		//move ajacant slot
+		//move ajacant slotint movement;
+		int movement;
+		printf("Do you want to move up(1), down(2), right(3) or left(4)\n");
+		scanf("%d", &movement);
+		
+		//move up
+		if(movement == 1){
+			r= r-1;
+		}
+		//move down
+		if(movement == 2){
+			r = r+1;
+		}
+		//move right
+		if(movement == 3){
+			c = c+1;
+		}
+		//move left
+		if(movement ==4){
+			c= c-1;
+		}
+		players[i].board[r][c];
+		printf("new location of %s is (%d , %d)", players[i].name_player, r, c);
+		
 	}
+	
 		
 		//capabilty change if moved to hill
-		/*
-	if( new location ==1){
+		
+	if( location[r][c].type ==1){
 			
 		if(players[i].dexterity < 50)
 			players[i].strength = players[i].strength -10;
 		if(players[i].dexterity >= 60)
-			players[i].strenght = players[i].strenght + 10;
+			players[i].strength = players[i].strength + 10;
 		}
-		*/
-		/*
-		if( new location  ==2){
+		
+		if( location[r][c].type  ==2){
 		//capabilty change if moved to City
 		if(players[i].smartness > 60)
 			players[i].magic_skills = players[i].magic_skills +10;
@@ -249,7 +265,7 @@ int r,c, slot_type;
 			players[i].dexterity = players[i].dexterity - 10;
 		}
 	
-	*/
+	
 	
 	if(round == 2){
 		//attack
