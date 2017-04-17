@@ -273,7 +273,7 @@ int r,c, slot_type;
 	for(i=0;i<number_players; i++){
 	printf("Choose an attack to perform\n 1. Near attack\n 2. Distant Attack\n 3. Magic Attack\n");
 	scanf("%d", &attack_number);	
-		*Near attack */
+		/*Near attack */
 if(attack_number == 1){
 	
 	
