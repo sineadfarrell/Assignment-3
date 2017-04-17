@@ -291,8 +291,8 @@ if(attack_number == 1){
 	//getting player to choose player to attack
 	printf("Choose a player to perform the attack on \n");
 	scanf("%d", &near_at);
-	//if they are on the same slot
-	if((players[near_at].row = players[i].row) && (players[near_at].column = players[i].column)){
+	
+	if(1 <= (abs(players[near_at].row - players[i].row) + abs(players[near_at].column = players[i].column)) {
 		if(players[near_at].strength <= 70){
 			players[near_at].life_points = players[near_at].life_points - (0.5 * players[i].strength);	
 		}
@@ -312,6 +312,12 @@ if(attack_number == 2){
 	printf("Choose a player to preform the attack on \n");
 	scanf("%d", &distant_at);
 	
+	if(5 > (abs(players[distant_at].row - players[i].row) + abs(players[distant_at].column = players[i].column)) && 1 < (abs(players[distant_at].row - players[i].row) + abs(players[distant_at].column = players[i].column))) {
+		
+		if(players[i].dexterity > players[distant_at].dexterity){
+			players[distant_at].life_points = players[distant_at].life_points - (0.3 * players[i].strength);
+		}
+	}
 	
 }
 
