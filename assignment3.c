@@ -331,6 +331,9 @@ if(attack_number == 3){
 	if(players[magic_at].smartness + players[magic_at].magic_skills > 150){
 		players[magic_at].life_points -= ((0.5 * players[i].magic_skills) + (0.2 * players[i].smartness)); 
 	}
+	else	{
+		printf("Magic attack not possible");
+	}
 }	
 }
 		
@@ -349,6 +352,13 @@ if(attack_number == 3){
 		}
 	}
 }
+	   
+	if(players[i].life_points == 0)	{
+		for(int c = players[i]; c < number_players-1; c++)	{
+			players[c] = players[c+1];
+		}
+		number_players -= 1;
+	}
 	if(number_players < 2){
 		printf("GAME OVER");
 		exit(0);
