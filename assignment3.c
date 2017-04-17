@@ -215,7 +215,7 @@ int r,c, slot_type;
  int round;
  	//while the game continues rounds are played
 	while(number_players >= 2){ 
-	for(i=0; i < number_players; i++){
+	for(i=1; i <= number_players; i++){
 		printf("Do you(%s) want to move to ajacant slot(1), attack(2) or quit game(3)\n", players[i+1].name_player);
 		scanf("%d", &round);
 	
@@ -269,6 +269,47 @@ int r,c, slot_type;
 	
 	if(round == 2){
 		//attack
+	int attack_number;
+	for(i=0;i<number_players; i++){
+	printf("Choose an attack to perform\n 1. Near attack\n 2. Distant Attack\n 3. Magic Attack\n");
+	scanf("%d", &attack_number);	
+		*Near attack */
+if(attack_number == 1){
+	
+	
+	
+	//find ajacant slot
+	//check if theres a player in the slots
+	//find player
+	//change capabilties 
+	
+	
+
+}
+
+if(attack_number == 2){
+	//Distant Attack
+	int distant_at;
+	//getting player to choose player to attack
+	printf("Choose a player to preform the attack on \n");
+	scanf("%d", &distant_at);
+	
+	
+}
+
+if(attack_number == 3){
+	//Magic attack
+	int magic_at;
+	//getting player to choose what attack it wants to preform
+	printf("Choose a player to preform the attack on \n");
+	scanf("%d", &magic_at);
+	
+	if(players[magic_at].smartness + players[magic_at].magic_skills > 150){//condition
+		players[magic_at].life_points -= ((0.5 * players[i].magic_skills) + (0.2 * players[i].smartness)); //change life points of attacked
+	}
+}	
+
+
 		
 	}
 	if(round == 3){
